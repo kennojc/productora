@@ -30,6 +30,15 @@
     <%= form.label :group_id %>
     <%= form.text_field :group_id %>
   </div>
+
+  <div class="field">
+  <%= form.label :group %>
+    <select name="concert[group_id]">
+    <% @groups.each do |group| %>
+      <option value="<%= group.id %>"><%= group.name %></option> 
+    <% end %>
+    </select>
+  </div>
   
 
   <div class="actions">
