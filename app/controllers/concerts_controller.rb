@@ -13,15 +13,18 @@ class ConcertsController < ApplicationController
   # GET /concerts/new
   def new
     @concert = Concert.new
+    @groups = Group.all
   end
 
   # GET /concerts/1/edit
   def edit
+    @groups = Group.all
   end
 
   # POST /concerts or /concerts.json
   def create
     @concert = Concert.new(concert_params)
+    @groups = Group.all
 
     respond_to do |format|
       if @concert.save

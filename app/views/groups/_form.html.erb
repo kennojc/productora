@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :bandtype %>
-    <%= form.number_field :bandtype %>
+    <%= form.select :bandtype , Group.bandtypes.keys %>
   </div>
 
   <div class="actions">

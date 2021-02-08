@@ -4,15 +4,19 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.all
+    @concerts = Concert.all
   end
 
   # GET /groups/1 or /groups/1.json
   def show
+  
   end
 
   # GET /groups/new
   def new
     @group = Group.new
+    @concerts = Concert.all
+    
   end
 
   # GET /groups/1/edit
@@ -33,6 +37,7 @@ class GroupsController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /groups/1 or /groups/1.json
   def update
