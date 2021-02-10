@@ -19,7 +19,7 @@
         <td><%= concert.event %></td>
         <td><%= concert.tickets %></td>
         <td><%= concert.duration %></td>
-        <td><%= concert.group_id %></td>
+        <td><%= concert.group.name %></td>
         <td><%= link_to 'Show', concert %></td>
         <td><%= link_to 'Edit', edit_concert_path(concert) %></td>
         <td><%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
