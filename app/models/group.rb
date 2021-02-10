@@ -9,12 +9,12 @@ class Group < ApplicationRecord
 
     
     def total_concerts
-        concerts.includes(group_id: id).count
+        concerts.where(group_id: id).count
     end
 
 
     def attendance
-        concerts.includes(group_id: id).map {|t| t.tickets}.sum
+        concerts.where(group_id: id).map{|concert| concert.tickets}.sum
     end
 
     def last_concert
