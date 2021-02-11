@@ -18,7 +18,7 @@ class Group < ApplicationRecord
     end
 
     def last_concert
-        concerts.order(date: :asc).last.date
+        concerts.where(group_id: id).map{|concert| concert.event.strftime("%Y:%B:%A")}.last
     end
 
     def max_people
@@ -30,7 +30,7 @@ class Group < ApplicationRecord
     end
 
     def debut
-        
+        concerts.where(group_id: id).map{|concert| concert.event}.first 
     end
 
 end
