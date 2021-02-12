@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-label">
     <%= form.label :event, "Fecha del Concierto" %>
-    <%= form.date_select :event %>
+    <%= form.date_select :event , :start_year => 1980 %>
   </div>
 
   <div class="field">

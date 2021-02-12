@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name , "Grupo" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :members %>
+    <%= form.label :members , "Cantidad Miembros" %>
     <%= form.number_field :members %>
   </div>
 
   <div class="field">
-    <%= form.label :debut %>
+    <%= form.label :debut , "Fecha Debut" %>
     <%= form.date_select :debut %>
   </div>
 
   <div class="field">
-    <%= form.label :bandtype %>
+    <%= form.label :bandtype , "Tipo de Banda"%>
     <%= form.select :bandtype , Group.bandtypes.keys %>
   </div>
 

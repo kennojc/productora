@@ -1,5 +1,5 @@
 class Group < ApplicationRecord
-    has_many :concerts
+    has_many :concerts, :dependent => :destroy
    
     enum bandtype: [:male, :female, :band]
 
@@ -29,8 +29,6 @@ class Group < ApplicationRecord
         concerts.pluck(:duration).max
     end
 
-    def debut
-        concerts.where(group_id: id).map{|concert| concert.event}.first 
-    end
+
 
 end

@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre del Grupo:</strong>
   <%= @group.name %>
 </p>
 
 <p>
-  <strong>Members:</strong>
+  <strong>Cantidad de Miembros:</strong>
   <%= @group.members %>
 </p>
 
@@ -17,7 +18,7 @@
 
 <p>
   <strong>Mayor Éxito:</strong>
-  <%= @group.max_people %>
+  <%= @group.max_people %> personas
 </p>
 
 <p>
@@ -31,9 +32,9 @@
 </p>
 
 <p>
-  <strong>Bandtype:</strong>
+  <strong>Tipo de banda:</strong>
   <%= @group.bandtype %>
 </p>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<%= link_to 'Editar', edit_group_path(@group) %> |
+<%= link_to 'Volver', groups_path %>
